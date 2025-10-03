@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TonyJDev</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Meta -->
+    <meta name="description" content="Programador backend, gamedev y actor de doblaje en ciernes. Portafolio de relatos, videojuegos y doblaje." />
+
+    <style>
+        /* Minimísimo CSS, priorizando utilidades Bootstrap */
+        .hero {
+            background: url('images/hero-livingroom.png') center/cover no-repeat;
+            height: 60vh; /* alto fijo aproximado */
+        }
+        html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 80px; }
+        #btnBackToTop { display: none; }
+    </style>
+</head>
+<body class="pt-5"> <!-- padding-top por navbar fixed -->
+
+<!-- NAVBAR -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#top">TonyJDev</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#relatos">Relatos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#videojuegos">Videojuegos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#doblaje">Doblaje</a></li>
+            </ul>
+            <!-- Toggle día/noche -->
+            <div class="ms-lg-3 d-flex align-items-center">
+                <i class="bi bi-sun me-2 text-light"></i>
+                <div class="form-check form-switch m-0">
+                    <input class="form-check-input" type="checkbox" role="switch" id="themeToggle" aria-label="Cambiar tema claro/oscuro">
+                </div>
+                <i class="bi bi-moon-stars ms-2 text-light"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="hero d-flex align-items-center justify-content-center text-center text-white position-relative">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,.35);"></div>
+    <div class="container position-relative">
+        <h1 class="display-6 fw-semibold">Programador backend de día<br />gamedev amateur por la noche<br />actor de doblaje en ciernes<br />escritor aficionado los domingos</h1>
+        <p class="lead mt-3">Portafolio y escaparate personal</p>
+        <div class="mt-4">
+            <a href="#relatos" class="btn btn-primary btn-lg me-2">Explorar relatos</a>
+            <a href="#videojuegos" class="btn btn-outline-light btn-lg">Ver videojuegos</a>
+        </div>
+    </div>
+</header>
+
+<main class="py-5">
+    <!-- RELATOS -->
+    <section id="relatos" class="py-5">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h2 class="h3 m-0">Relatos cortos</h2>
+            </div>
+
+            <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                <!-- Card Relato (placeholder) -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/relato1/600/360" class="card-img-top" alt="Portada del relato" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Ecos en el pasillo</h3>
+                            <p class="card-text text-secondary">Un técnico recorre a oscuras un complejo tras un fallo de la IA, hallando notas que no encajan del todo.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-secondary">≈ 1.200 palabras</span> <span class="badge text-bg-info">Sci‑fi</span>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal"
+                                    data-bs-title="Ecos en el pasillo"
+                                    data-bs-content="\u003cp\u003eLas luces de emergencia parpadeaban cada nueve segundos... (Contenido de ejemplo. Sustituir por el relato real)\u003c/p\u003e">
+                                Leer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/relato2/600/360" class="card-img-top" alt="Portada del relato" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Domingos sin prisa</h3>
+                            <p class="card-text text-secondary">Un escritor aficionado toma café mientras decide si su protagonista merece redención.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-secondary">≈ 900 palabras</span> <span class="badge text-bg-info">Costumbrista</span>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal"
+                                    data-bs-title="Domingos sin prisa"
+                                    data-bs-content="\u003cp\u003eEl reloj atrasado de la cocina marcaba las once cuando... (Contenido de ejemplo)\u003c/p\u003e">
+                                Leer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/relato3/600/360" class="card-img-top" alt="Portada del relato" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">La última compilación</h3>
+                            <p class="card-text text-secondary">Una build nocturna, un bug imposible y un commit que nadie recuerda haber hecho.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-secondary">≈ 1.500 palabras</span> <span class="badge text-bg-info">Thriller tech</span>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#storyModal"
+                                    data-bs-title="La última compilación"
+                                    data-bs-content="\u003cp\u003eCuando el pipeline falló por tercera vez... (Contenido de ejemplo)\u003c/p\u003e">
+                                Leer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEOJUEGOS -->
+    <section id="videojuegos" class="py-5 bg-body-tertiary">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h2 class="h3 m-0">Videojuegos</h2>
+            </div>
+
+            <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                <!-- Card Juego (placeholder) -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/game1/600/360" class="card-img-top" alt="Captura de videojuego" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Echoes Facility</h3>
+                            <p class="card-text text-secondary">Walking simulator de exploración narrativa en un complejo tras una IA desbocada.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-primary">Exploración</span> <span class="badge text-bg-secondary">PC</span>
+                            <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener"
+                               aria-label="Abrir página en itch.io">
+                                itch.io <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/game2/600/360" class="card-img-top" alt="Captura de videojuego" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Subterra City</h3>
+                            <p class="card-text text-secondary">Aventura de terror psicológico inspirada en una ciudad medieval sepultada.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-primary">Terror psicológico</span> <span class="badge text-bg-secondary">PC</span>
+                            <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener">
+                                itch.io <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/game3/600/360" class="card-img-top" alt="Captura de videojuego" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Mall Mayhem</h3>
+                            <p class="card-text text-secondary">Mini‑juegos para pantallas físicas conectadas con el móvil vía QR.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-primary">Arcade</span> <span class="badge text-bg-secondary">Web</span>
+                            <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener">
+                                itch.io <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBLAJE -->
+    <section id="doblaje" class="py-5">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h2 class="h3 m-0">Doblaje</h2>
+            </div>
+
+            <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                <!-- Card Doblaje (placeholder) -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/voice1/600/360" class="card-img-top" alt="Miniatura de doblaje" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Monólogo dramático</h3>
+                            <p class="card-text text-secondary">Prueba de interpretación con matices de susurro y clímax emotivo.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-danger">YouTube</span>
+                            <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener">
+                                Ver <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/voice2/600/360" class="card-img-top" alt="Miniatura de doblaje" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Locución publicitaria</h3>
+                            <p class="card-text text-secondary">Versión de spot con ritmo dinámico y cierre cálido.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-warning">Instagram</span>
+                            <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener">
+                                Ver <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://picsum.photos/seed/voice3/600/360" class="card-img-top" alt="Miniatura de doblaje" />
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Diálogo cómico</h3>
+                            <p class="card-text text-secondary">Doblaje a dos voces con timbres contrastados.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center small bg-body-tertiary">
+                            <span class="badge text-bg-dark">TikTok</span>
+                            <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener">
+                                Ver <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light py-4 mt-auto">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+        <div class="d-flex align-items-center gap-3">
+            <a class="text-light" href="https://github.com/tonyjdev" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github fs-4"></i></a>
+            <a class="text-light" href="https://tonyjdev.itch.io" target="_blank" rel="noopener" aria-label="itch.io (genérico)"><i class="bi bi-controller fs-4"></i></a>
+            <a class="text-light" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube fs-4"></i></a>
+            <a class="text-light" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i></a>
+            <a class="text-light" href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
+        </div>
+        <div class="small">Hecho con mucho amor</div>
+    </div>
+</footer>
+
+<!-- Back to top -->
+<button id="btnBackToTop" type="button" class="btn btn-primary btn-lg rounded-circle position-fixed end-0 bottom-0 me-3 mb-3" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- MODAL Relato -->
+<div class="modal fade" id="storyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="storyModalTitle">Título del relato</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body" id="storyModalBody">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // ===== Tema claro/oscuro (Bootstrap 5.3 color modes) =====
+    (function() {
+        const root = document.documentElement;
+        const toggle = document.getElementById('themeToggle');
+        const saved = localStorage.getItem('theme');
+        const current = saved || root.getAttribute('data-bs-theme') || 'light';
+        root.setAttribute('data-bs-theme', current);
+        toggle.checked = current === 'dark';
+        toggle.addEventListener('change', () => {
+            const next = toggle.checked ? 'dark' : 'light';
+            root.setAttribute('data-bs-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    })();
+
+    // ===== Modal dinámico para relatos =====
+    const storyModal = document.getElementById('storyModal');
+    storyModal.addEventListener('show.bs.modal', (event) => {
+        const btn = event.relatedTarget;
+        if (!btn) return;
+        const title = btn.getAttribute('data-bs-title') || 'Relato';
+        const content = btn.getAttribute('data-bs-content') || '<p>Contenido no disponible.</p>';
+        document.getElementById('storyModalTitle').textContent = title;
+        document.getElementById('storyModalBody').innerHTML = content;
+    });
+
+    // ===== Back to Top =====
+    const backToTop = document.getElementById('btnBackToTop');
+    window.addEventListener('scroll', () => {
+        backToTop.style.display = window.scrollY > 400 ? 'inline-flex' : 'none';
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== Scroll a secciones con offset fijo =====
+    document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (!target) return;
+            e.preventDefault();
+            const y = target.getBoundingClientRect().top + window.pageYOffset - 70; // offset por navbar
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        });
+    });
+</script>
+</body>
+</html>
